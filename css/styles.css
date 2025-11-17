@@ -1,0 +1,603 @@
+@font-face{
+    font-family: 'FriendsFont';
+    src: url('../fonts/friends.ttf') format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #fff8f0;
+    line-height: 1.5;
+    font-family: "Patrick Hand", cursive;
+    letter-spacing: .2em;
+}
+
+.red{color: #e53935;}
+.yellow{color: #fdd835;}
+.blue{color: #1e88e5;}
+.purple{color: #9C8CD4;}
+.dark-green{color: rgb(12, 70, 12);}
+.light-blue{color: #70B8C6;}
+
+/* MAIN BUTTON */
+
+.button{
+    background: #f5c518;
+    color: #000;
+    font-weight: 700;
+    padding: 1em 1.5em;
+    margin: 1em 0;
+    border: none;
+    border-radius: 0.5em;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover,
+.button:focus{
+    background: #ddb70f;
+}
+
+/* NAVIGATION */
+
+.navbar{
+    background: #000000;
+}
+
+.navbar .nav-container{
+    margin: 0 auto;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-toggle{display:none}
+.nav-burger{display:none}
+
+.navbar .nav-links{
+    padding: 2em;
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar .nav-links li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+.navbar .nav-links li a.active{
+    color: #f5c518;
+}
+.navbar .nav-links li a:hover,
+.navbar .nav-links li a:focus{
+    color: #9C8CD4;
+}
+
+
+/* HEADERS */
+
+.main-header{
+    background: #ffffff;
+    text-align: center;
+    padding: 4em 2em;
+    flex-shrink: 0;
+    min-height: 36em;
+}
+.main-header .title, .main-header h2{
+    font-family:  'FriendsFont', sans-serif;  
+    font-size: 1.6rem;
+    letter-spacing:  0.2em;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+.title{
+    font-weight: bold;
+    font-size: 1.2em;
+    vertical-align:  middle;
+}
+.main-header p{
+    font-size: 1.125rem;
+    margin-top: 2em;
+    margin-bottom: 5em;
+    color: #666;
+}
+
+#synopsis{
+    width: 100%;
+    height: 80vh;
+    text-align: center;
+    background-image: url(../media/central-perk.png);
+    background-repeat: no-repeat;
+    background-position: top;
+}
+#synopsis h1{
+    margin: 1em 0;
+}
+#synopsis p,
+#cast p,
+#seasons p,
+#media p{
+    padding: 3em;
+    margin-top: 12em;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+}
+
+#cast{
+    width: 100%;
+    height: 80vh;
+    text-align: center;
+    background-image: url(../media/behind.png);
+    background-repeat: no-repeat;
+    background-position: 50% 25%;
+}
+#cast h1,
+#seasons h1,
+#episodes h1,
+#media h1{
+    margin: 1em;
+}
+
+#seasons{
+    width: 100%;
+    height: 80vh;
+    text-align: center;
+    background-image: url(../media/seasons-image.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 25%;
+}
+
+#episodes{
+    width: 100%;
+    height: 80vh;
+    text-align: center;
+    background-image: url(../media/intro.gif);
+    background-repeat: no-repeat;
+    background-position: 50% 25%;
+}
+#episodes p{
+    margin-top: 20em;
+    margin-bottom: 3em;
+}
+
+#media{
+    width: 100%;
+    height: 80vh;
+    text-align: center;
+    background-image: url(../media/collage.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 25%;
+}
+
+/* SECTIONS */
+
+.main-section{
+    padding: 3em 2em;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.main-section h2{
+    font-size: 1.75rem;
+    margin: 1.5em;
+    color: #f5c518;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(14em,1fr));
+    gap: 2em;
+    max-width: 60em;
+    margin: 0 auto;
+}
+
+.card{
+    background: #fff;
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: 0 0 0.5em rgba(0,0,0,0.1);
+    color: #333;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.card:focus{
+    transform: translateY(-0.3em);
+    box-shadow: 0 0.5em 1em rgba(0,0,0,0.15);
+}
+
+.card img{
+    width: 100%;
+    height: 18em;
+    border: 0;
+}
+
+.card h3{
+    font-size: 1.3rem;
+    margin-bottom: 0.5em;
+}
+
+.card p{
+    font-size: 1rem;
+    margin-top: 0.7em;
+    color: #555;
+}
+
+#history{
+    width: 90vw;
+    margin: 0 auto;
+    font-size: 1.1em;
+}
+#history h2{
+    margin-bottom: 1em;
+    margin-top: 2em;
+    text-align: center;
+}
+
+#meet-cast h2{
+    margin: 1.5em;
+    text-align: center;
+}
+
+#watch-seasons,
+#watch-seasons h2,
+#watch-episodes h2{
+    text-align: center;
+    margin: 1em 0;
+}
+.season-card{
+    height: 23em;
+    background: #fff;
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: 0 0 0.5em rgba(0,0,0,0.1);
+    color: #333;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.season-card h3{
+    margin-bottom: 1em;
+}
+.season-card p{
+    margin-bottom: 3em;
+    min-height: 10em;
+}
+.episode-card{
+  background:#fff;
+  padding:1.5em;
+  border-radius:0.6em;
+  margin-bottom:2em;
+  max-width:40em;
+  margin-left:auto;
+  margin-right:auto;
+  box-shadow:0 0.8em 1.6em rgba(0,0,0,0.08);
+  text-align:center;
+}
+.episode-card h3{
+    min-height: 3em;
+}
+.episode-card p{
+    margin: 1em 0;
+    min-height: 5em;
+}
+
+.media-gallery{
+  text-align:center; 
+  margin-top:2em;
+}
+
+.media-gallery img{
+  width: 100%; 
+  max-width: 80vw; 
+  height: 30em;           
+  margin: 1em 2em;    
+  border-radius:0.6em;   
+  box-shadow:0 0.8em 1.2em rgba(0,0,0,0.15);
+        
+}
+.media-gallery img:hover{
+  transform:scale(1.03);
+  transition:transform 0.25s ease;
+}
+
+.contact-wrap{
+  max-width:70em;
+  margin:2em auto;
+  padding:0 2em;
+  text-align:center;
+}
+
+.contact-info,
+.contact-form{
+  display:inline-block;
+  width:45%;
+  vertical-align:top;
+  margin:0 1.5% 2em 1.5%;
+  background:#fff;
+  padding:2em;
+  border-radius:0.8em;
+  box-shadow:0 1em 2em rgba(0,0,0,0.08);
+  text-align:left;
+}
+
+.contact-info h2,
+.contact-form h2{
+  font-size:1.6rem;
+  margin-bottom:0.6em;
+  color:#333;
+}
+
+.contact-info a{
+    text-decoration: none;
+    color: #1e88e5;
+}
+
+.contact-list{
+  margin-top:0.8em;
+  padding-left:1.4em;
+  line-height:1.6;
+}
+
+.contact-form label{
+  display:block;
+  margin-top:1em;
+  font-weight:700;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+  width:100%;
+  padding:1em;
+  margin-top:0.4em;
+  border:0.12em solid #ccc;
+  border-radius:0.6em;
+  background:#fafafa;
+  font-size:1rem;
+  outline:none;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus{
+  border-color:#f5c518; 
+  background:#fff;
+}
+
+
+/* FOOTER */
+
+footer{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2em 1em;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+}
+
+footer p + p{
+    margin-top: 0.5em;
+}
+
+/* MEDIA QUERIES */
+
+@media(max-width: 480px){
+    .cards{
+        grid-template-columns: 1;
+        gap: 1em;
+        min-width: none;
+    }
+    .card,
+    .season-card{
+        padding: 1.2em;
+        border-radius: 4px;
+        box-shadow:0 0.4em 0.8em rgba(0,0,0,0.08);
+    }
+    .card h3,
+    .season-card h3{
+        font-size: 1rem;
+    }
+    .card p,
+    .season-card p{
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+
+    #synopsis p,
+    #cast p,
+    #seasons p,
+    #episodes p,
+    #media p{
+        padding: 1em;
+        margin-top: 13em;
+        margin-bottom: 2em;
+        font-size: 1em;
+    }
+    #cast h1,
+    #seasons h1,
+    #episodes h1,
+    #media h1{
+        margin-bottom: 1em;
+        font-size: 1.6em;
+    }
+    #history
+    {
+        width: 80vw;
+        text-align: center;
+        font-size: .8em;
+    }
+    #history h2{
+        margin-bottom: .8em;
+    }
+    
+    #synopsis{
+        width: 100%;
+        height: 60vh;
+        background-position: 50% 30%;
+        background-size: contain;
+    }
+    #cast,
+    #seasons,
+    #episodes,
+    #media{
+        background-size: contain;
+    }
+    .contact-info,
+  .contact-form{
+    display:block;         
+    width:100%;
+    margin:0 0 1.2em 0;
+    padding:1.2em;
+    border-radius:0.8em;
+  }
+}
+
+@media (min-width:481px) and (max-width:768px){
+    .card,
+    .season-card,
+    .episode-card{
+        width:100%;
+        min-height:auto;
+        padding:1.5em;
+        margin:0 auto;
+    }
+}
+
+@media(max-width: 768px){
+    .navbar .nav-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        padding: 1em 1.5em;   
+        position: relative;   
+        z-index: 1;
+    }
+    .nav-logo{
+        position: relative;
+        z-index: 2;
+    }
+    .nav-burger{
+        display: inline-block;
+        position: absolute;
+        right: 2em;
+        top: 3em;
+        color: #fff;
+        background: #000;
+        border: 3px solid rgba(255,255,255,0.3);
+        border-radius: 4px;
+        padding: 0.4em 0.8em;
+        font-weight: 700;
+        cursor: pointer;
+        z-index: 3;
+        user-select: none;
+    }
+    .navbar .nav-links{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        padding: 0;
+        margin: 0;
+        max-height: 0;
+        overflow: hidden;
+        background: #000;
+        border-bottom: 2px solid rgba(255,255,255,0.2);
+        z-index: 1;
+    }
+    .navbar .nav-links li{
+        display: block;
+        margin: 0;
+    }
+    .navbar .nav-links li a{
+        display: block;
+        padding: 1em 1.2em;
+        border-bottom: 2px solid rgba(255,255,255,0.08);
+    }
+    .nav-toggle:checked + .nav-burger + .nav-links{
+        position: absolute;
+        top: 8em; 
+        max-height: 80vh; 
+        z-index: 2;        
+    }
+    .navbar{
+        position: relative;
+    }
+
+    #synopsis,
+    #seasons,
+    #episodes,
+    #media{
+        height: 95vh;
+    }
+    #history
+    {
+        width: 80vw;
+        text-align: center;
+        font-size: 1em;
+    }
+    #history h2{
+        margin-bottom: 1em;
+    }
+    .cards{
+        grid-template-columns: repeat(auto-fit,minmax(18em,1fr));
+        gap: 1.5em;
+        padding: 0 1em;
+    }
+    .card,
+    .season-card{
+        padding: 1.5em;
+        border-radius: 3px;
+    }
+    .card h3,
+    .season-card h3{
+        font-size: 1.2rem;
+    }
+
+    .card p,
+    .season-card p{
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    .media-gallery{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1em;
+        padding: 1em;
+    }
+    .media-gallery img{
+        width: 100%;
+        max-width: 35em;       
+        height: 14em;          
+            
+    }
+}
+
+@media(min-width: 769px) and (max-width:1024px){
+    #history
+    {
+        width: 80vw;
+        text-align: center;
+        font-size: 1em;
+    }
+    #history h2{
+        margin-bottom: 1em;
+        margin-top: 2em;
+    }
+} 
+

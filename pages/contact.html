@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <img src="../media/logo.png" alt="Friends Logo">
+            </a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-burger">☰</label>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="synopsis.html">Synopsis</a></li>
+                <li><a href="cast.html">Cast</a></li>
+                <li><a href="seasons.html">Seasons</a></li>
+                <li><a href="episodes.html">Episodes</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <header>
+
+    </header>
+    <section>
+        <div class="contact-wrap">
+            <div class="contact-info">
+                <h2>Contact Info</h2>
+                <p><strong>Email:</strong> <a href="mailto:hello@friendsfans.com">hello@friendsfans.com</a></p>
+                <p><strong>Instagram:</strong> <a href="https://www.instagram.com/friendsfan.page__?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">@friendsfan.page_</a></p>
+                <p><strong>Location:</strong> Central Perk (in spirit), NYC</p>
+
+                <h3 style="margin-top:1.5em">Before you send</h3>
+                <ul class="contact-list">
+                <li>Be kind — it's a fan project.</li>
+                <li>Share ideas for new pages or corrections.</li>
+                <li>Tell us your top 3 episodes!</li>
+                </ul>
+            </div>
+
+            <div class="contact-form">
+                <h2>Send a Message</h2>
+
+                <form action="mailto:hello@friendsfansite.example" method="post" enctype="text/plain">
+                <label for="name">Name</label>
+                <input id="name" name="Name" type="text" required>
+
+                <label for="email">Email</label>
+                <input id="email" name="Email" type="email" required>
+
+                <label for="subject">Subject</label>
+                <input id="subject" name="Subject" type="text" required>
+
+                <label for="character">Favorite Character</label>
+                <select id="character" name="Favorite Character">
+                    <option value="Rachel">Rachel</option>
+                    <option value="Monica">Monica</option>
+                    <option value="Phoebe">Phoebe</option>
+                    <option value="Joey">Joey</option>
+                    <option value="Chandler">Chandler</option>
+                    <option value="Ross">Ross</option>
+                </select>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="Message" rows="6" required></textarea>
+
+                <button type="submit" class="button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Copyright &copy; 2025 Friends Fanpage Website</p>
+    </footer>
+</body>
+</html>
