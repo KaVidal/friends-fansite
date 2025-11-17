@@ -46,6 +46,10 @@ body{
 
 /* NAVIGATION */
 
+.back-to-top{
+    display:none;
+}
+
 .navbar{
     background: #000000;
 }
@@ -123,6 +127,10 @@ body{
 }
 #synopsis h1{
     margin: 1em 0;
+}
+.center{
+    text-align: center;
+    list-style-position: inside;
 }
 #synopsis p,
 #cast p,
@@ -379,17 +387,66 @@ body{
 
 /* FOOTER */
 
-footer{
-    background: #333;
+.site-footer{
+    background: #000;
     color: #fff;
     text-align: center;
-    padding: 2em 1em;
-    font-size: 0.875rem;
-    flex-shrink: 0;
+    padding: 1em;
 }
 
-footer p + p{
-    margin-top: 0.5em;
+.footer-top{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3em;
+    flex-wrap: nowrap;
+}
+
+.footer-logo img{
+    width: 12em;
+    height: auto;
+}
+
+.footer-nav{
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover{
+    color: #f5c518; 
+}
+
+.footer-socials{
+    display: flex;
+    gap: 2em;
+}
+
+.footer-socials a{
+    color: #fff;
+    font-size: 1.2em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.footer-socials a:hover{
+    color: #f5c518;
+    transform:translateY(-0.2em);
+}
+
+.footer-copy{
+    margin-top: 1.5em;
+    font-size: .9rem;
+    opacity: .8;
 }
 
 /* MEDIA QUERIES */
@@ -456,16 +513,26 @@ footer p + p{
         background-size: contain;
     }
     .contact-info,
-  .contact-form{
-    display:block;         
-    width:100%;
-    margin:0 0 1.2em 0;
-    padding:1.2em;
-    border-radius:0.8em;
-  }
+    .contact-form{
+        display:block;         
+        width:100%;
+        margin:0 0 1.2em 0;
+        padding:1.2em;
+        border-radius:0.8em;
+    }
+    .footer-logo img{ 
+        width:7em; 
+    }
+    .back-to-top{
+        font-size: .8em;
+        white-space: nowrap;
+    }
+    .footer-social a{ 
+        font-size:1rem; 
+    }
 }
 
-@media (min-width:481px) and (max-width:768px){
+@media (min-width:481px) and (max-width:767px){
     .card,
     .season-card,
     .episode-card{
@@ -586,6 +653,23 @@ footer p + p{
         height: 14em;          
             
     }
+    .footer-nav{
+        display: none;
+    }
+    .back-to-top{
+        display: block;
+        text-align: center;
+        color: #fff;
+        font-size: 1.2em;
+        transition: color 0.3s ease, transform 0.3s ease;
+        text-transform: uppercase;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+    .back-to-top:hover{
+        color: #f5c518;
+        transform:translateY(-0.2em)
+    }
 }
 
 @media(min-width: 769px) and (max-width:1024px){
@@ -598,6 +682,25 @@ footer p + p{
     #history h2{
         margin-bottom: 1em;
         margin-top: 2em;
+    }
+    .site-footer{
+        width: 100vw;
+    }
+    .footer-nav{
+        display: none;
+    }
+    .back-to-top{
+        display: block;
+        text-align: center;
+        color: #fff;
+        font-size: 1.2em;
+        transition: color 0.3s ease, transform 0.3s ease;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    .back-to-top:hover{
+        color: #f5c518;
+        transform:translateY(-0.2em)
     }
 } 
 
