@@ -1,6 +1,6 @@
 @font-face{
     font-family: 'FriendsFont';
-    src: url('../fonts/friends.ttf') format('truetype');
+    src: url('../fonts/friends.TTF') format('truetype');
 }
 
 *{
